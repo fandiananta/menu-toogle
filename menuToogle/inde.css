@@ -1,0 +1,66 @@
+* {
+    padding: 0;
+    margin: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    overflow-x: hidden;
+}
+
+nav {
+    display: flex;
+    width: 100%;
+    height: 50px;
+    background-color: black;
+}
+
+nav ul {
+    width: 40%;
+    display: flex;
+    line-height: 50px;
+    justify-content: space-between;
+    margin: auto;
+}
+
+nav ul a {
+    color: white;
+    text-decoration: none;
+}
+
+nav li {
+    list-style: none;
+}
+
+.toogle button {
+    display: none;
+}
+
+@media (min-width: 320px) and (max-width: 767px) {
+    nav {
+        width: 100%;
+    }
+    nav ul {
+        position: absolute;
+        flex-direction: column;
+        background-color: black;
+        right: 0;
+        top: 0;
+        height: 100vh;
+        width: 80%;
+        align-items: center;
+        justify-content: space-evenly;
+        z-index: -1;
+        transform: translateX(100%);
+        transition: all 2s;
+    }
+    .toogle button {
+        display: flex;
+    }
+    #tombol {
+        transform: translate(440px);
+    }
+    ul.slide {
+        transform: translateX(0);
+    }
+}
